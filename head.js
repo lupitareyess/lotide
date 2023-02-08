@@ -11,12 +11,11 @@ const assertEqual = function(actual, expected) {
 // Return first element in an array - should not be returned as an array
 
 const head = function(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    return arr[i]
-  }
+  return arr[0]
 };
 
 assertEqual(head([5, 6, 7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
 assertEqual(head([6]), 6);
 assertEqual(head([]), undefined);
+
