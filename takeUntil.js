@@ -23,13 +23,14 @@ const assertArraysEqual = function(actual, expected) {
 const takeUntil = function(arr, callback) {
   let newArr = [];
   for (let item of arr) {
-    if (!callback(item)) {
-      newArr.push(item);
-    } else {
+    if (callback(item)) {
       return newArr;
     }
+    newArr.push(item);
   }
+  return newArr;
 };
+
 
 
 // TEST CODE
