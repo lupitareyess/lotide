@@ -1,12 +1,10 @@
-// Create function that can compare 2 arrays for a perfect match
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed:${actual} === ${expected}`);
-  } if (actual !== expected) {
-    console.log(`🛑🛑🛑 Assertion Failed:${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
+/**
+ * 
+ * @param {array} arr1 
+ * @param {array} arr2 
+ * @returns true if perfect match or false if not
+ */
 
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
@@ -19,10 +17,4 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-// TEST CODE
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), false);
-assertEqual(eqArrays([1, 2, 3, 4], [1, 2, 3, 7]), false);
-assertEqual(eqArrays([1, 2, 3, 7], [1, 2, 3, 7]), true);
-assertEqual(eqArrays([1, 2, 3, 4], [1, 2, 3]), false);
-
+module.exports = eqArrays;
