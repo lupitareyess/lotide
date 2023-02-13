@@ -1,6 +1,6 @@
 {
   "name": "@lupitareyess/lotide",
-  "version": "1.0.0",
+  "version": "1.0.11",
   "description": "Mini clone of Lodash created by Lighthouse Labs student",
   "main": "index.js",
   "directories": {
